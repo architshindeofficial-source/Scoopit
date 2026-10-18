@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Main & JEE Advanced Comprehensive Guide 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tab-btn.active {
+            border-bottom: 3px solid #2563eb;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .dark .tab-btn.active {
+            border-bottom: 3px solid #60a5fa;
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-200 border-b shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    JEE
+                </div>
+                <span class="font-bold text-lg sm:text-xl tracking-tight hidden sm:inline text-slate-900 dark:text-white">
+                    PrepPortal <span class="text-blue-600 dark:text-blue-400">2026</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#overview" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Overview</a>
+                <a href="#comparison" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Comparison</a>
+                <a href="#eligibility" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Eligibility</a>
+                <a href="#syllabus" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Syllabus</a>
+                <a href="#tips" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Strategy & Tips</a>
+            </nav>
+
+            <!-- Right Controls (Theme Toggle + Mobile Menu Button) -->
+            <div class="flex items-center space-x-3">
+                <button id="themeToggle" aria-label="Toggle dark mode" class="p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                    <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Open navigation menu" class="md:hidden p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+            <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Overview</a>
+            <a href="#comparison" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Comparison</a>
+            <a href="#eligibility" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Eligibility</a>
+            <a href="#syllabus" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Syllabus</a>
+            <a href="#tips" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Strategy & Tips</a>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-blue-50/50 via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 mb-6 border border-blue-200 dark:border-blue-800">
+                    <i class="fa-solid fa-graduation-cap"></i> Complete Aspirant Blueprint 2026
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+                    Master <span class="gradient-text">JEE Main & JEE Advanced</span>
+                </h1>
+                <p class="max-w-3xl mx-auto text-base sm:text-xl text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
+                    Your all-in-one guide for exam patterns, detailed syllabus highlights, eligibility criteria, key differences, and expert preparation strategies for India's premier engineering entrance exams.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#overview" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 text-center">
+                        Explore Exam Overview
+                    </a>
+                    <a href="#syllabus" class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold transition-all text-center">
+                        View Syllabus
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Exam Overviews</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Understanding the core purpose, structure, and authorities behind JEE Main and JEE Advanced.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- JEE Main Card -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow border">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-lg bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200">
+                                Step 1 Entrance
+                            </span>
+                            <i class="fa-solid fa-laptop-code text-2xl text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">JEE Main 2026</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            National Level entrance exam acting as a gateway for premier institutes and the sole qualifying test for JEE Advanced.
+                        </p>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-building text-blue-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Conducting Body</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">National Testing Agency (NTA)</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-file-lines text-blue-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Papers & Structure</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">Paper 1 (B.E./B.Tech) & Paper 2 (B.Arch/B.Planning). Consists of MCQs and Numerical Value Questions.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-desktop text-blue-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Mode of Exam</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">Computer Based Test (CBT) (Drawing section for B.Arch is offline).</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-bullseye text-blue-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Primary Purpose</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">Admissions to NITs, IIITs, CFTIs, and qualification for JEE Advanced.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JEE Advanced Card -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow border">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-lg bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-200">
+                                Step 2 Elite Level
+                            </span>
+                            <i class="fa-solid fa-brain text-2xl text-purple-600 dark:text-purple-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">JEE Advanced 2026</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                            The final stage of the Joint Entrance Examination for top performers aiming for premier Indian Institutes of Technology (IITs).
+                        </p>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-university text-purple-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Conducting Body</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">Rotated annually among one of the 7 zonal IITs under JAB.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-user-check text-purple-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Eligibility Criteria</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">Top ~2,50,000 qualified candidates from JEE Main Paper 1.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-layer-group text-purple-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Exam Format</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">2 compulsory papers (Paper 1 & Paper 2) held on the same day. Dynamic pattern (MCQs, Multi-correct, Integer/Numerical).</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-trophy text-purple-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-slate-900 dark:text-white">Primary Purpose</strong>
+                                    <span class="text-slate-600 dark:text-slate-400">Exclusive admission into Bachelor's, Integrated Master's, or Dual Degree programs in 23 IITs.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Comparison Table -->
+        <section id="comparison" class="py-16 bg-slate-100/70 dark:bg-slate-800/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight mb-3">Head-to-Head Comparison</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Compare core features, difficulty, and target institutes at a glance.</p>
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm glass-card">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-200/50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-semibold">
+                                <th class="p-4 border-b dark:border-slate-700">Feature</th>
+                                <th class="p-4 border-b dark:border-slate-700 text-blue-600 dark:text-blue-400">JEE Main</th>
+                                <th class="p-4 border-b dark:border-slate-700 text-purple-600 dark:text-purple-400">JEE Advanced</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 dark:divide-slate-700 text-sm">
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Conducting Body</td>
+                                <td class="p-4">National Testing Agency (NTA)</td>
+                                <td class="p-4">Seven zonal IITs (JAB)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Exam Mode</td>
+                                <td class="p-4">Computer Based Test (CBT)</td>
+                                <td class="p-4">Computer Based Test (CBT)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Number of Papers</td>
+                                <td class="p-4">Paper 1 (B.Tech) OR Paper 2 (B.Arch/Plan)</td>
+                                <td class="p-4">Two mandatory papers (Paper 1 & Paper 2)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Target Institutes</td>
+                                <td class="p-4">NITs, IIITs, CFTIs, State Colleges</td>
+                                <td class="p-4">23 IITs, IISc, IISERs (via separate portal)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Attempts Allowed</td>
+                                <td class="p-4">3 consecutive years (2 sessions per year)</td>
+                                <td class="p-4">2 consecutive years only</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Question Style</td>
+                                <td class="p-4">Speed & accuracy oriented, predictable format</td>
+                                <td class="p-4">Deep conceptual, multi-correct, dynamic pattern</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
+                                <td class="p-4 font-medium">Difficulty Level</td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200 text-xs font-semibold">Moderate</span></td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200 text-xs font-semibold">High to Very High</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eligibility Criteria Section -->
+        <section id="eligibility" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Eligibility Criteria</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Verify requirements before applying.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Main Eligibility -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                        <i class="fa-solid fa-circle-check"></i> JEE Main Criteria
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-blue-500 mt-1"></i>
+                            <span><strong>Qualifying Exam:</strong> Passed Class 12th or equivalent examination with Physics, Chemistry, and Mathematics.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-blue-500 mt-1"></i>
+                            <span><strong>Age Limit:</strong> No upper age limit for appearing in JEE Main.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-blue-500 mt-1"></i>
+                            <span><strong>Admission Requirement:</strong> Minimum 75% aggregate marks in Class 12th (65% for SC/ST) or top 20 percentile for NIT/IIIT admissions.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Advanced Eligibility -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-purple-600 dark:text-purple-400">
+                        <i class="fa-solid fa-circle-check"></i> JEE Advanced Criteria
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-purple-500 mt-1"></i>
+                            <span><strong>JEE Main Rank:</strong> Must be in the Top ~2.5 Lakh rank holders in JEE Main (Paper 1).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-purple-500 mt-1"></i>
+                            <span><strong>Class 12th Year:</strong> Must have appeared for Class 12th exam for the first time in either the current or immediately preceding year.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-purple-500 mt-1"></i>
+                            <span><strong>IIT Admission:</strong> Candidate should not have been previously admitted to an IIT.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Syllabus Breakdown Section -->
+        <section id="syllabus" class="py-16 bg-slate-100/70 dark:bg-slate-800/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold tracking-tight mb-3">Syllabus Highlights</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Core topics categorized by subject for efficient targeted preparation.</p>
+                </div>
+
+                <!-- Subject Tabs -->
+                <div class="flex justify-center border-b border-slate-300 dark:border-slate-700 mb-8 space-x-6">
+                    <button class="tab-btn active px-4 py-2 font-medium transition-all" onclick="openSubject('physics')">
+                        <i class="fa-solid fa-atom mr-2"></i>Physics
+                    </button>
+                    <button class="tab-btn px-4 py-2 font-medium transition-all" onclick="openSubject('chemistry')">
+                        <i class="fa-solid fa-flask mr-2"></i>Chemistry
+                    </button>
+                    <button class="tab-btn px-4 py-2 font-medium transition-all" onclick="openSubject('maths')">
+                        <i class="fa-solid fa-calculator mr-2"></i>Mathematics
+                    </button>
+                </div>
+
+                <!-- Tab Panels -->
+                <!-- Physics -->
+                <div id="physics" class="subject-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">Mechanics</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Kinematics, Laws of Motion, Work Energy Power, Rotational Dynamics, Gravitation, Rigid Body Mechanics.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">Electromagnetism</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Electrostatics, Current Electricity, Magnetic Effects, EMI, AC, Electromagnetic Waves.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">Modern Physics & Optics</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Dual Nature, Atoms & Nuclei, Ray Optics, Wave Optics, Semiconductors & Communication Systems.</p>
+                    </div>
+                </div>
+
+                <!-- Chemistry -->
+                <div id="chemistry" class="subject-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Physical Chemistry</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Mole Concept, Thermodynamics, Chemical Equilibrium, Electrochemistry, Chemical Kinetics.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Organic Chemistry</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">GOC, Hydrocarbons, Reaction Mechanisms, Biomolecules, Aldehydes & Ketones.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-emerald-600 dark:text-emerald-400 mb-2">Inorganic Chemistry</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Periodic Table, Chemical Bonding, Coordination Compounds, p-Block & d-Block Elements.</p>
+                    </div>
+                </div>
+
+                <!-- Mathematics -->
+                <div id="maths" class="subject-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-purple-600 dark:text-purple-400 mb-2">Calculus</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Limits & Continuity, Differentiation, Definite Integrals, Differential Equations, Application of Derivatives.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-purple-600 dark:text-purple-400 mb-2">Algebra</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Complex Numbers, Quadratic Equations, Matrices & Determinants, Sequences & Series, Permutations.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-purple-600 dark:text-purple-400 mb-2">Coordinate & Vectors</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-300">Straight Lines, Circles, Conic Sections (Parabola, Ellipse, Hyperbola), Vector Algebra, 3D Geometry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Strategy & Tips -->
+        <section id="tips" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Preparation Strategy & Tips</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Essential guidance to maximize performance and maintain momentum.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-700">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Time Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Divide your daily study schedule into focused blocks. Balance new concept learning with problem solving and continuous revision.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-700">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Revision Cycles</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Create short formula notes and summary maps. Weekly and monthly revisions ensure long-term memory retention of critical formulas.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-700 sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Mock Tests & Analysis</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Take full-length mock tests strictly in time-bound conditions. Spend time analyzing weak areas and avoiding recurring mistakes.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>© 2026 JEE PrepPortal. Informational resource for JEE Main & JEE Advanced aspirants.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Dark / Light Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Syllabus Tab switching
+        function openSubject(subjectName) {
+            const panels = document.querySelectorAll('.subject-panel');
+            panels.forEach(panel => panel.classList.add('hidden'));
+
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(subjectName).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
